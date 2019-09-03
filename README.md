@@ -16,16 +16,20 @@ Linux Server Configuration Challenge from the Udacity Fullstack Nanodegree.
 
 a. Packages updated and upgraded
 
- - `sudo apt-get update`
- - `sudo apt-get upgrade`
+ ```
+ $ sudo apt-get update 
+ $ sudo apt-get upgrade
+ ```
   
 
   b. Additionally installed packages 
   
- -  Finger for user inspection
-    `sudo apt-get install finger`
--   Git 
-    `sudo apt-get install git`
+ ```
+ # Finger for user inspection
+ $ sudo apt-get install finger
+ # Git 
+ $ sudo apt-get install git
+ ```
  
 #### Configuration changes 
 
