@@ -1,13 +1,13 @@
 # Linux Server Configuration
+** Udacity Fullstack Nanodegree **
 
-#### About
 Linux Server Configuration Challenge from the Udacity Fullstack Nanodegree.
 
 #### IP Address and SSH port 
 
- | Ip Address | SSH port |
- |------------|----------|
- |3.123.69.175 | 2200|
+ | Ip Address  | SSH port |
+ |------------ |----------|
+ |3.123.69.175 | 2200     |
 
 #### Webapplication Url 
 
