@@ -12,7 +12,7 @@ Linux Server Configuration Challenge from the Udacity Fullstack Nanodegree.
 ## Webapplication Url 
 
 
-# Installed software
+## Installed software
 
 a. Packages updated and upgraded
 
@@ -36,6 +36,7 @@ a. Packages updated and upgraded
  
 ## Configuration changes 
 
+
 -------------------------------------
  1. Changed ssh port from 22 to 2200
 -------------------------------------
@@ -45,6 +46,7 @@ a. Packages updated and upgraded
 - Added port 2200 to the ufw firewall and enabled the ufw firewall 
 - Restarted sshd with: `sudo service sshd restart`
 - Deleted port ssh port 22 from Lightsail management console
+   
    
 ------------------------------------   
 2. Configured firewall
@@ -78,6 +80,7 @@ a. Packages updated and upgraded
     ```
     $ sudo ufw status
     ```
+    
 --------------------------------  
 3. Added another user account
 -------------------------------
@@ -109,6 +112,7 @@ Login with:
 ```
 $ ssh grader@3.123.69.175 -p 2200 -i ~/.ssh/linuxxCourse
 ```
+
 
 ---------------------------------
 4. Denied remote login as root
