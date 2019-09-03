@@ -36,7 +36,7 @@ a. Packages updated and upgraded
  
 ### Configuration changes 
 
- a. Changed ssh port from 22 to 2200
+ 1. Changed ssh port from 22 to 2200
     
 - Added a custom port 2200 to the Lightsail management console 
 - Edited the port 22 to 2200 in sshd_config (folder: /etc/ssh/)
@@ -44,7 +44,7 @@ a. Packages updated and upgraded
 - Restarted sshd with: `sudo service sshd restart`
 - Deleted port ssh port 22 from Lightsail management console
     
-b. Configured firewall 
+2. Configured firewall 
 
 - Default incoming requests: Denied 
     ```
@@ -75,7 +75,7 @@ b. Configured firewall
     $ sudo ufw status
     ```
   
-c. Added another user account 
+3. Added another user account 
 
 - Added user grader:  
     ```
@@ -103,6 +103,14 @@ $ sudo nano /etc/sudoers.d/grader
 Login with: 
 ```
 $ ssh grader@3.123.69.175 -p 2200 -i ~/.ssh/linuxxCourse
+```
+
+4. Denied remote login as root 
+
+Changed etc/ssh/sshd_config: 
+
+```
+PermitRootLogin no
 ```
 
 ### Third-pary resources used to complete project
