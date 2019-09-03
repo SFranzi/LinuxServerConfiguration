@@ -77,7 +77,7 @@ Login with:
 
 #### Third-pary resources used to complete project
 
-- Putty
+[1] [Putty](https://www.putty.org/)
 
 
 
