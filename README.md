@@ -36,8 +36,10 @@ a. Packages updated and upgraded
  
 ### Configuration changes 
 
+--------------------------------------------
  **1. Changed ssh port from 22 to 2200**
-    
+--------------------------------------------
+
 - Added a custom port 2200 to the Lightsail management console 
 - Edited the port 22 to 2200 in sshd_config (folder: /etc/ssh/)
 - Added port 2200 to the ufw firewall and enabled the ufw firewall 
