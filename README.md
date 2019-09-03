@@ -3,16 +3,16 @@
 
 Linux Server Configuration Challenge from the Udacity Fullstack Nanodegree.
 
-#### IP Address and SSH port 
+### IP Address and SSH port 
 
  | Ip Address  | SSH port |
  |------------ |----------|
  |3.123.69.175 | 2200     |
 
-#### Webapplication Url 
+### Webapplication Url 
 
 
-#### Installed software
+### Installed software
 
 a. Packages updated and upgraded
 
@@ -25,16 +25,16 @@ a. Packages updated and upgraded
   b. Additionally installed packages 
   
 
- # Finger for user inspection
+ Finger for user inspection
  ```
  $ sudo apt-get install finger
  ```
- # Git
+ Git
  ```
  $ sudo apt-get install git
  ```
  
-#### Configuration changes 
+### Configuration changes 
 
  a. Changed ssh port from 22 to 2200
     
@@ -105,7 +105,7 @@ Login with:
 $ ssh grader@3.123.69.175 -p 2200 -i ~/.ssh/linuxxCourse
 ```
 
-#### Third-pary resources used to complete project
+### Third-pary resources used to complete project
 
 [1] [Putty](https://www.putty.org/) - SSH and telnet client
 
