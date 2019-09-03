@@ -36,6 +36,7 @@ a. Packages updated and upgraded
  
 ## Configuration changes 
 
+
  1. Changed ssh port from 22 to 2200
 -------------------------------------
 
