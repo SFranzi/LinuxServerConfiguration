@@ -3,16 +3,16 @@
 
 Linux Server Configuration Challenge from the Udacity Fullstack Nanodegree.
 
-### IP Address and SSH port 
+## IP Address and SSH port 
 
  | Ip Address  | SSH port |
  |------------ |----------|
  |3.123.69.175 | 2200     |
 
-### Webapplication Url 
+## Webapplication Url 
 
 
-### Installed software
+# Installed software
 
 a. Packages updated and upgraded
 
@@ -34,9 +34,8 @@ a. Packages updated and upgraded
  $ sudo apt-get install git
  ```
  
-### Configuration changes 
---------------------------------------------
---------------------------------------------
+## Configuration changes 
+
  **1. Changed ssh port from 22 to 2200**
 --------------------------------------------
 
