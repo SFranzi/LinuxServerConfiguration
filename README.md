@@ -77,7 +77,7 @@ Login with:
 
 #### Third-pary resources used to complete project
 
-[1] [Putty](https://www.putty.org/)
+[1] [Putty](https://www.putty.org/) - SSH and telnet client
 
 
 
