@@ -1,5 +1,5 @@
 # Linux Server Configuration
-** Udacity Fullstack Nanodegree **
+**Udacity Fullstack Nanodegree**
 
 Linux Server Configuration Challenge from the Udacity Fullstack Nanodegree.
 
@@ -56,24 +56,24 @@ b. Configured firewall
   
 c. Added another user account 
 
-- Added user grader:
-    `sudo adduser grader`
-- Gave sudo rights to grader:
-Copied the following permissions file from the user ubuntu
-`sudo cp /etc/sudoers.d/ubuntu /etc/sudoers.d/grader`
-Changed name ubuntu in file to grader with nano
-`sudo nano /etc/sudoers.d/grader`
+- Added user grader:  
+    `sudo adduser grader`  
+- Gave sudo rights to grader:  
+Copied the following permissions file from the user ubuntu  
+`sudo cp /etc/sudoers.d/ubuntu /etc/sudoers.d/grader`  
+Changed name ubuntu in file to grader with nano  
+`sudo nano /etc/sudoers.d/grader`  
 - Enabled keybased authentication:
-   > Created a key pair locally with `ssh-keygen`
-    Opened the .pub file and copied public key
-    Created /.ssh directory on server
-    Created a authorized_key file in /.ssh directory 
-    Opened authorized_key file with nano and pasted in public key 
-    Set permissions on /.ssh directory to 700 with `chmod 700 .ssh`
-    Set permissions on .ssh/authorized_keys to 644 with chmod `chmod 644 .ssh`
+   > Created a key pair locally with `ssh-keygen`  
+    Opened the .pub file and copied public key  
+    Created /.ssh directory on server  
+    Created a authorized_key file in /.ssh directory   
+    Opened authorized_key file with nano and pasted in public key     
+    Set permissions on /.ssh directory to 700 with `chmod 700 .ssh`  
+    Set permissions on .ssh/authorized_keys to 644 with chmod `chmod 644 .ssh`  
 
 Login with: 
-`ssh grader@3.123.69.175 -p 2200 -i ~/.ssh/linuxxCourse`
+`ssh grader@3.123.69.175 -p 2200 -i ~/.ssh/linuxxCourse`  
 
 #### Third-pary resources used to complete project
 
