@@ -86,12 +86,12 @@ a. Packages updated and upgraded
 -------------------------------
 
 - Added user grader:  
-    ```
-    $ sudo adduser grader
-    ```  
-- Gave sudo rights to grader:  
 
-Copied the following permissions file from the user ubuntu  
+```
+$ sudo adduser grader
+```  
+- Gave sudo rights to grader:  
+Copied the following permissions file from the user ubuntu 
 ```
 $ sudo cp /etc/sudoers.d/ubuntu /etc/sudoers.d/grader
 ```  
@@ -100,13 +100,13 @@ Changed name ubuntu in file to grader with nano
 $ sudo nano /etc/sudoers.d/grader
 ```  
 - Enabled keybased authentication:
-   > Created a key pair locally with `ssh-keygen`  
-    Opened the .pub file and copied public key  
-    Created /.ssh directory on server  
-    Created a authorized_key file in /.ssh directory   
-    Opened authorized_key file with nano and pasted in public key     
-    Set permissions on /.ssh directory to 700 with `chmod 700 .ssh`  
-    Set permissions on .ssh/authorized_keys to 644 with chmod `chmod 644 .ssh`  
+1. Created a key pair locally with `ssh-keygen`  
+2. Opened the .pub file and copied public key  
+3. Created /.ssh directory on server  
+4. Created a authorized_key file in /.ssh directory   
+5. Opened authorized_key file with nano and pasted in public key     
+6. Set permissions on /.ssh directory to 700 with `chmod 700 .ssh`  
+7. Set permissions on .ssh/authorized_keys to 644 with chmod `chmod 644 .ssh`  
 
 Login with: 
 ```
