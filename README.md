@@ -24,10 +24,13 @@ a. Packages updated and upgraded
 
   b. Additionally installed packages 
   
- ```
+
  # Finger for user inspection
+ ```
  $ sudo apt-get install finger
- # Git 
+ ```
+ # Git
+ ```
  $ sudo apt-get install git
  ```
  
@@ -44,29 +47,50 @@ a. Packages updated and upgraded
 b. Configured firewall 
 
 - Default incoming requests: Denied 
-    `sudo ufw default deny incoming`
+    ```
+    sudo ufw default deny incoming
+    ```
 - Default outgoing requests: Allowed
-    `sudo ufw default allow outgoing`
+    ```
+    sudo ufw default allow outgoing
+    ```
 - Allow port 2200 
-    `sudo ufw allow 2200`
+    ```
+    sudo ufw allow 2200
+    ```
 - Allow port 80 
-     `sudo ufw allow 80`
+    ```
+    sudo ufw allow 80
+    ```
 - Allow port 123
-    `sudo ufw allow 123`
+    ```
+    sudo ufw allow 123 
+    ```
 - Enable firewall
-    `sudo ufw enable`
+    ```
+    sudo ufw enable
+    ```
 - Request status
-    `sudo ufw status`
+    ```
+    sudo ufw status
+    ```
   
 c. Added another user account 
 
 - Added user grader:  
-    `sudo adduser grader`  
+    ```
+    sudo adduser grader
+    ```  
 - Gave sudo rights to grader:  
+
 Copied the following permissions file from the user ubuntu  
-`sudo cp /etc/sudoers.d/ubuntu /etc/sudoers.d/grader`  
+```
+sudo cp /etc/sudoers.d/ubuntu /etc/sudoers.d/grader
+```  
 Changed name ubuntu in file to grader with nano  
-`sudo nano /etc/sudoers.d/grader`  
+```
+sudo nano /etc/sudoers.d/grader
+```  
 - Enabled keybased authentication:
    > Created a key pair locally with `ssh-keygen`  
     Opened the .pub file and copied public key  
@@ -77,7 +101,9 @@ Changed name ubuntu in file to grader with nano
     Set permissions on .ssh/authorized_keys to 644 with chmod `chmod 644 .ssh`  
 
 Login with: 
-`ssh grader@3.123.69.175 -p 2200 -i ~/.ssh/linuxxCourse`  
+```
+$ ssh grader@3.123.69.175 -p 2200 -i ~/.ssh/linuxxCourse
+```
 
 #### Third-pary resources used to complete project
 
