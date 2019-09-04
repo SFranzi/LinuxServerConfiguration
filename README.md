@@ -216,6 +216,7 @@ application.secret_key = 'Add your secret key'
 </VirtualHost>
 ```
 
+10. Run application at `3.123.69.175:80`
 
 
 
