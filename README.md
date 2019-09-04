@@ -216,27 +216,14 @@ application.secret_key = 'Add your secret key'
 </VirtualHost>
 ```
 
+10. Enabled the CatalogApp.conf file and restarted Apache
+
+```
+$ sudo a2ensite CatalogAppp.conf
+$ sudo service apache2 restart
+```
+
 10. Run application at `3.123.69.175:80`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Third-pary resources used to complete project
 
