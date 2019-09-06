@@ -3,9 +3,11 @@
 
 Linux Server Configuration Challenge from the Udacity Fullstack Nanodegree.
 
+To access the CatalogApp type **http://3.123.69.175/** in your browser.
+
 ## IP Address and SSH port 
 
- | Ip Address  | SSH port |
+ | IP Address  | SSH port |
  |------------ |----------|
  |3.123.69.175 | 2200     |
 
@@ -44,6 +46,7 @@ a. Packages updated and upgraded
  Mod_wsgi module 
  ```
  $ sudo apt-get install libapache2-mod-wsgi-py3
+ # enable wsgi
  $ sudo a2enmod wsgi
  ```
  
@@ -154,43 +157,40 @@ Restarted sshd service:
 $ sudo service sshd restart
 ```
 
----------------------------------------------------
-5. Apache Server Configuration and Webapp deployment 
-----------------------------------------------------
+-------------------------------------------------------------
+5. Apache Server Configuration and Web Application deployment 
+-------------------------------------------------------------
 
-5.1. Cloned Git repository CatalogApp into `/var/www/`
-5.2. Changed user and group to grader of CatalogApp directory 
+5.1 Created a directory in `/var/www/` named catalog
+5.2. Cloned Git repository CatalogApp into `/var/www/catalog` and named it catalog. 
+So the new directory has the following structure `/var/www/catalog/catalog`
+5.3. Changed user and group to grader of catalog directory 
 ```
-$ sudo chown -R $USER:$USER /var/www/CatalogApp
+$ sudo chown -R $USER:$USER /var/www/catalog
 ```
-5.3. Created virtual environment with 
+5.4 Set permissions of /var/www/catalog/catalog directory to 666
+```
+$ sudo chmod 666 catalog
+```
+5.5. Created virtual environment with 
 ```
 $ python3 -m venv venv 
 ```
-5.4. Activated virtual environement 
+5.6. Activated virtual environement 
 ```
 $ source venv/bin/activate
 ```
-5.5. Installed all required packages
+5.7 Installed package 'wheel'
+```
+$ pip install wheel`
+```
+
+5.8. Installed all required packages
 ```
 $ pip install -r requirements.txt
 ```
-5.6. Created .flaskenv file with content in CatalogApp directory
 
-```
-FLASK_APP = catalog.py
-GOOGLE_CLIENT_ID = "YOUR_SECRET_KEY"
-GOOGLE_CLIENT_SECRET = "YOUR_CLIENT_SECRET"
-OAUTHLIB_INSECURE_TRANSPORT = 1
-```
-
-5.7. set Flask_APP environment variable in ~/.profile
-
-```
-echo "export FLASK_APP=catalog.py" >> ~/.profile
-```
-
-5.8. Created a catalog.wsgi file in CatalogApp directory
+5.9. Created a catalog.wsgi file in /var/www directory
 
 ```
 
@@ -206,7 +206,7 @@ application.secret_key = 'your_secret_key'
 
 ```
 
-5.9. Created a CatalogApp.conf file in the /etc/apache2/sites-enabled directory
+5.9. Created a catalog.conf file in the /etc/apache2/sites-enabled directory
 
 ```
 ## /etc/apache2/sites-available/catalog.conf
@@ -233,18 +233,25 @@ application.secret_key = 'your_secret_key'
 </VirtualHost>
 ```
 
-5.10. Enabled the CatalogApp.conf file and restarted Apache
+5.10. Enabled the catalog.conf file and restarted Apache
 
 ```
 $ sudo a2ensite CatalogAppp.conf
 $ sudo service apache2 restart
 ```
+--------------------------------------------
+6. Settig up database server
+--------------------------------------------
 
-5.11. Run application at `3.123.69.175:80`
+Changed file permissions of app.db to 666
 
---------------------
-6. Apache commands 
----------------------
+```
+$ sudo chmod 666 app.db
+```
+
+----------------------------
+7. Further helpful commands 
+----------------------------
 
 - Restart Apache 
 
@@ -273,3 +280,4 @@ $ dpkg -s packagename | grep Status
 ### Third-pary resources used to complete project
 
 [1] [Putty](https://www.putty.org/) - SSH and telnet client
+[2] [The Flask Mega-Tutorial Part XVII: Deployment on Linux](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux)
