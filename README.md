@@ -11,7 +11,7 @@ To access the CatalogApp type **http://3.123.69.175/** in your browser.
 
 ## Installed software
 
-a. Packages updated and upgraded
+- Packages updated and upgraded
 
  ```
  $ sudo apt-get update 
@@ -19,7 +19,7 @@ a. Packages updated and upgraded
  ```
   
 
-  b. Additionally installed packages 
+- Additionally installed packages 
   
 
  Finger for user inspection
