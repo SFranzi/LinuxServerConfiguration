@@ -29,16 +29,19 @@ To access the CatalogApp type **http://3.123.69.175/** in your browser.
  ```
  
  Git
+ 
  ```
  $ sudo apt-get install git
  ```
  
  Apache 
+ 
  ```
  sudo apt-get install apache2
  ```
  
  Mod_wsgi module 
+ 
  ```
  $ sudo apt-get install libapache2-mod-wsgi-py3
  # enable wsgi
@@ -47,11 +50,13 @@ To access the CatalogApp type **http://3.123.69.175/** in your browser.
  
  
  Python and flask packages
+ 
  ```
  $ sudo apt-get install python3 ipython3 python3-flask curl python3-venv python3-dev
  ```
  
  SQLite3
+ 
  ```
  $ sudo apt-get install sqlite3
  ```
@@ -113,12 +118,17 @@ To access the CatalogApp type **http://3.123.69.175/** in your browser.
 ```
 $ sudo adduser grader
 ```  
+
 - Gave sudo rights to grader:  
+
 Copied the following permissions file from the user ubuntu 
+
 ```
 $ sudo cp /etc/sudoers.d/ubuntu /etc/sudoers.d/grader
 ```  
+
 Changed name ubuntu in file to grader with nano  
+
 ```
 $ sudo nano /etc/sudoers.d/grader
 ```  
@@ -132,6 +142,7 @@ $ sudo nano /etc/sudoers.d/grader
 7. Set permissions on .ssh/authorized_keys to 644 with chmod `chmod 644 .ssh`  
 
 Login with: 
+
 ```
 $ ssh grader@3.123.69.175 -p 2200 -i ~/.ssh/linuxxCourse
 ```
@@ -161,27 +172,36 @@ $ sudo service sshd restart
 5.2. Cloned Git repository CatalogApp into `/var/www/catalog` and named it catalog (result: `/var/www/catalog/catalog`)
 
 5.3. Changed user and group to grader of catalog directory   
+
 ```
 $ sudo chown -R $USER:$USER /var/www/catalog
 ```
+
 5.4 Set permissions of /var/www/catalog/catalog directory to 666
+
 ```
 $ sudo chmod 666 catalog
 ```
+
 5.5. Created virtual environment with 
+
 ```
 $ python3 -m venv venv 
 ```
+
 5.6. Activated virtual environement 
+
 ```
 $ source venv/bin/activate
 ```
 5.7 Installed package 'wheel'
+
 ```
-$ pip install wheel`
+$ pip install wheel
 ```
 
 5.8. Installed all required packages
+
 ```
 $ pip install -r requirements.txt
 ```
@@ -232,7 +252,7 @@ application.secret_key = 'your_secret_key'
 5.10. Enabled the catalog.conf file and restarted Apache
 
 ```
-$ sudo a2ensite CatalogAppp.conf
+$ sudo a2ensite catalog.conf
 $ sudo service apache2 restart
 ```
 --------------------------------------------
