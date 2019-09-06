@@ -44,7 +44,9 @@ a. Packages updated and upgraded
  Mod_wsgi module 
  ```
  $ sudo apt-get install libapache2-mod-wsgi-py3
+ $ sudo a2enmod wsgi
  ```
+ 
  
  Python and flask packages
  ```
@@ -185,36 +187,51 @@ OAUTHLIB_INSECURE_TRANSPORT = 1
 7. set Flask_APP environment variable in ~/.profile
 
 ```
-echo "export FLASK_APP=microblog.py" >> ~/.profile
+echo "export FLASK_APP=catalog.py" >> ~/.profile
 ```
 
 8. Created a catalog.wsgi file in CatalogApp directory
 
 ```
+
+#!/usr/bin/python
 import sys
 import logging
 logging.basicConfig(stream=sys.stderr)
-sys.path.insert(0,"/var/www/CatalogApp/")
+sys.path.insert(0, "/var/www/catalog/catalog")
 
-from CatalogApp import app as application
-application.secret_key = 'Add your secret key'
+from catalog import app as application
+
+application.secret_key = 'your_secret_key'
+
 ```
 
 9. Created a CatalogApp.conf file in the /etc/apache2/sites-enabled directory
 
 ```
+## /etc/apache2/sites-available/catalog.conf
+
 <VirtualHost *:80>
-                ServerName 3.123.69.175
-                ServerAdmin admin@mywebsite.com
-                WSGIScriptAlias / /var/www/CatalogApp/catalog.wsgi
-                <Directory /var/www/CatalogApp/app/>
-                        Require all granted
-                </Directory>
-                ErrorLog ${APACHE_LOG_DIR}/error.log
-                LogLevel warn
-                CustomLog ${APACHE_LOG_DIR}/access.log combined
+    ServerName 3.123.69.175
+   # ServerAlias ip-172-26-1-146
+   # ServerAdmin admin@3.123.69.175
+    #The WSGIDaemoProcess needs to contain the path to the application and the path to the site packages when using virtual env
+    WSGIDaemonProcess catalog python-path=/var/www/catalog/catalog/venv/lib/python3.6/site-packages
+    # The WSGIProcessGroup tells the virtual host to use the WSGI daemon created before
+    WSGIProcessGroup catalog
+    WSGIScriptAlias / /var/www/catalog/catalog.wsgi
+    <Directory /var/www/catalog/catalog/>
+       # Order allow,deny
+       # Allow from all
+        Options FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-```
+'''
 
 10. Enabled the CatalogApp.conf file and restarted Apache
 
@@ -224,6 +241,33 @@ $ sudo service apache2 restart
 ```
 
 10. Run application at `3.123.69.175:80`
+
+--------------------
+6. Apache commands 
+---------------------
+
+Restart Apache 
+
+```
+$ sudo service apache2 restart
+```
+
+Check Apache Status 
+
+```
+$ sudo systemctl status apache2
+```
+
+Apache Error Log 
+
+```
+$ nano /var/log/apache2/error.log
+
+Check if package is installed
+
+```
+$ dpkg -s packagename | grep Status
+```
 
 ### Third-pary resources used to complete project
 
