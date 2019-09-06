@@ -158,24 +158,24 @@ $ sudo service sshd restart
 5. Apache Server Configuration and Webapp deployment 
 ----------------------------------------------------
 
-1. Cloned Git repository CatalogApp into `/var/www/`
-2. Changed user and group to grader of CatalogApp directory 
+5.1. Cloned Git repository CatalogApp into `/var/www/`
+5.2. Changed user and group to grader of CatalogApp directory 
 ```
 $ sudo chown -R $USER:$USER /var/www/CatalogApp
 ```
-3. Created virtual environment with 
+5.3. Created virtual environment with 
 ```
 $ python3 -m venv venv 
 ```
-4. Activated virtual environement 
+5.4. Activated virtual environement 
 ```
 $ source venv/bin/activate
 ```
-5. Installed all required packages
+5.5. Installed all required packages
 ```
 $ pip install -r requirements.txt
 ```
-6. Created .flaskenv file with content in CatalogApp directory
+5.6. Created .flaskenv file with content in CatalogApp directory
 
 ```
 FLASK_APP = catalog.py
@@ -184,13 +184,13 @@ GOOGLE_CLIENT_SECRET = "YOUR_CLIENT_SECRET"
 OAUTHLIB_INSECURE_TRANSPORT = 1
 ```
 
-7. set Flask_APP environment variable in ~/.profile
+5.7. set Flask_APP environment variable in ~/.profile
 
 ```
 echo "export FLASK_APP=catalog.py" >> ~/.profile
 ```
 
-8. Created a catalog.wsgi file in CatalogApp directory
+5.8. Created a catalog.wsgi file in CatalogApp directory
 
 ```
 
@@ -206,7 +206,7 @@ application.secret_key = 'your_secret_key'
 
 ```
 
-9. Created a CatalogApp.conf file in the /etc/apache2/sites-enabled directory
+5.9. Created a CatalogApp.conf file in the /etc/apache2/sites-enabled directory
 
 ```
 ## /etc/apache2/sites-available/catalog.conf
@@ -233,37 +233,38 @@ application.secret_key = 'your_secret_key'
 </VirtualHost>
 ```
 
-10. Enabled the CatalogApp.conf file and restarted Apache
+5.10. Enabled the CatalogApp.conf file and restarted Apache
 
 ```
 $ sudo a2ensite CatalogAppp.conf
 $ sudo service apache2 restart
 ```
 
-10. Run application at `3.123.69.175:80`
+5.11. Run application at `3.123.69.175:80`
 
 --------------------
 6. Apache commands 
 ---------------------
 
-Restart Apache 
+- Restart Apache 
 
 ```
 $ sudo service apache2 restart
 ```
 
-Check Apache Status 
+- Check Apache Status 
 
 ```
 $ sudo systemctl status apache2
 ```
 
-Apache Error Log 
+- Apache Error Log 
 
 ```
 $ nano /var/log/apache2/error.log
+```
 
-Check if package is installed
+- Check if package is installed
 
 ```
 $ dpkg -s packagename | grep Status
@@ -272,25 +273,3 @@ $ dpkg -s packagename | grep Status
 ### Third-pary resources used to complete project
 
 [1] [Putty](https://www.putty.org/) - SSH and telnet client
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
