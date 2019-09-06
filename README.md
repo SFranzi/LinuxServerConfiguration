@@ -9,9 +9,6 @@ To access the CatalogApp type **http://3.123.69.175/** in your browser.
  |------------ |----------|
  |3.123.69.175 | 2200     |
 
-## Webapplication Url 
-
-
 ## Installed software
 
 a. Packages updated and upgraded
