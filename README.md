@@ -79,34 +79,47 @@ To access the CatalogApp type **http://3.123.69.175/** in your browser.
 2. Configured firewall
 ------------------------------------
 
-- Default incoming requests: Denied 
+- Default incoming requests: Denied  
+
     ```
     $ sudo ufw default deny incoming
     ```
+    
 - Default outgoing requests: Allowed
+
     ```
     $ sudo ufw default allow outgoing
     ```
+    
 - Allow port 2200 
+
     ```
     $ sudo ufw allow 2200
     ```
+    
 - Allow port 80 
+
     ```
     $ sudo ufw allow 80
     ```
+    
 - Allow port 123
+
     ```
     $ sudo ufw allow 123 
     ```
 - Enable firewall
+
     ```
     $ sudo ufw enable
     ```
+    
 - Request status
+
     ```
     $ sudo ufw status
     ```
+    
 - Changed ports in Lightsail management console to 80, 2200, 123
 
 --------------------------------  
