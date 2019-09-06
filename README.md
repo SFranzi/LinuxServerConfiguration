@@ -308,5 +308,5 @@ $ dpkg -s packagename | grep Status
 
 ### Third-pary resources used to complete project
 
-[1] [Putty](https://www.putty.org/) - SSH and telnet client
+[1] [Putty](https://www.putty.org/) - SSH and telnet client  
 [2] [The Flask Mega-Tutorial Part XVII: Deployment on Linux](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xvii-deployment-on-linux)
