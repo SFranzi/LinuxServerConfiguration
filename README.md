@@ -102,7 +102,8 @@ To access the CatalogApp type **http://3.123.69.175/** in your browser.
     ```
     $ sudo ufw status
     ```
-    
+- Changed ports in Lightsail management console to 80, 2200, 123
+
 --------------------------------  
 3. Added another user account
 -------------------------------
@@ -134,7 +135,6 @@ Login with:
 ```
 $ ssh grader@3.123.69.175 -p 2200 -i ~/.ssh/linuxxCourse
 ```
-
 
 ---------------------------------
 4. Denied remote login as root
