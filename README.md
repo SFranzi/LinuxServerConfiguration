@@ -231,7 +231,7 @@ application.secret_key = 'your_secret_key'
     LogLevel warn
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-'''
+```
 
 10. Enabled the CatalogApp.conf file and restarted Apache
 
