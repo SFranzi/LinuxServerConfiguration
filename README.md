@@ -156,10 +156,10 @@ $ sudo service sshd restart
 5. Apache Server Configuration and Web Application deployment 
 -------------------------------------------------------------
 
-5.1 Created a directory in `/var/www/` named catalog
-5.2. Cloned Git repository CatalogApp into `/var/www/catalog` and named it catalog. 
-So the new directory has the following structure `/var/www/catalog/catalog`
-5.3. Changed user and group to grader of catalog directory 
+5.1 Created a directory in `/var/www/` named catalog  
+5.2. Cloned Git repository CatalogApp into `/var/www/catalog` and named it catalog     
+So the new directory has the following structure `/var/www/catalog/catalog`  
+5.3. Changed user and group to grader of catalog directory   
 ```
 $ sudo chown -R $USER:$USER /var/www/catalog
 ```
