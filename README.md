@@ -1,8 +1,6 @@
 # Linux Server Configuration
 **Udacity Fullstack Nanodegree**
 
-Linux Server Configuration Challenge from the Udacity Fullstack Nanodegree.
-
 To access the CatalogApp type **http://3.123.69.175/** in your browser.
 
 ## IP Address and SSH port 
