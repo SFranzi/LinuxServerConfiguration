@@ -190,7 +190,7 @@ $ sudo service sshd restart
 $ sudo chown -R $USER:$USER /var/www/catalog
 ```
 
-5.4 Set permissions of /var/www/catalog/catalog directory to 666
+5.4 Set permissions of /var/www/catalog/catalog directory to 777
 
 ```
 $ sudo chmod 666 catalog
@@ -272,7 +272,7 @@ $ sudo service apache2 restart
 6. Settig up database server
 --------------------------------------------
 
-Changed file permissions of app.db to 666
+Changed file permissions of app.db to 766
 
 ```
 $ sudo chmod 666 app.db
